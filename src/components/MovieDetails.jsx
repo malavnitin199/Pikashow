@@ -59,13 +59,6 @@ function MovieDetails() {
             >
               <i class="ri-pages-fill"></i>
             </NavLink>
-            <NavLink
-              to={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}
-              className=" text-white "
-              target="_blank"
-            >
-              Imdb
-            </NavLink>
           </div>
         </nav>
 

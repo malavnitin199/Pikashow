@@ -10,10 +10,12 @@ function Header() {
         data.results[Math.floor(Math.random() * data.results.length)],
         "ss"
       );
-      setHeaderData(
-        data.results[Math.floor(Math.random() * data.results.length)]
-      );
-      //   setInterval(() => {}, 2500);
+
+      setInterval(() => {
+        setHeaderData(
+          data.results[Math.floor(Math.random() * data.results.length)]
+        );
+      }, 2500);
     } catch (error) {
       console.log(error);
     }
@@ -24,16 +26,17 @@ function Header() {
   return headerData ? (
     <div
       style={{
-        backgroundRepeat: "no-repeat",
-        background: `linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.8)),   url(https://image.tmdb.org/t/p/w500/${
+        backgroundColor: "linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.8)",
+        backgroundImage: `url(https://image.tmdb.org/t/p/w500/${
           headerData.backdrop_path ||
           headerData.profile_path ||
           "/d0DE3AgXsN6amSk89VC4TSUdDe.jpg"
         })`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        // backgroundRepeat: "no-repeat",
       }}
-      className=" w-full h-[55vh] flex flex-col justify-end p-[7%] items-start "
+      className=" w-full h-[55vh] flex flex-col justify-end p-[7%] items-start bg-no-repeat	duration-1000"
     >
       <h1 className="w-[70%] text-5xl font-bold text-blue-400 mb-6">
         {headerData.name || headerData.title || headerData.original_title}

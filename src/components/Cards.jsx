@@ -23,9 +23,9 @@ function Cards({ title, hideoption, data }) {
     getRandomHeaderImage();
   }, [catagory]);
   return (
-    <div className="h-[50%] w-full mt-2 flex flex-col justify-between">
+    <div className="h-[33.3%] w-full mt-2 flex flex-col ">
       {!hideoption && (
-        <div className="flex justify-between h-[20%%]">
+        <div className="flex justify-between h-[20%]">
           <h1 className="text-2xl font-semibold m-2 bg-slate-600 p-2 rounded-xl  hover:text-yellow-300">
             <i class="ri-fire-fill mr-2"></i>
             Trending
@@ -33,7 +33,7 @@ function Cards({ title, hideoption, data }) {
           <Input options={options} setCatagory={setCatagory} />
         </div>
       )}
-      <div className="h-[70%] w-[100%] flex overflow-x-auto  ">
+      <div className="h-[75%] w-[100%] flex overflow-x-auto  ">
         {data
           ? data.similar?.map((s) => (
               <div className="  min-w-[250px]  mx-2 ">
